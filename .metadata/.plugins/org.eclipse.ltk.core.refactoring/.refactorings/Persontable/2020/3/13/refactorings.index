@@ -1,0 +1,54 @@
+1584950913710	Move 'log4j.xml' to 'WebContent'
+1584950920660	Move 'log4j.xml' to 'WEB-INF'
+1584951305010	Move 'cart.html' to 'board'
+1584951333285	Move 'cart.html' to 'target'
+1584951336340	Move 'cart.html' to 'WebContent'
+1584951403054	Move 'cart.html' to 'board'
+1584951422491	Move 'cart.html' to 'other'
+1584954320697	Rename resource 'car.sql'
+1584954619328	Rename package 'spring.web.board.dao'
+1584954634407	Rename package 'spring.web.board.vo'
+1584954641166	Rename package 'spring.web.board.svc'
+1584954646434	Rename package 'spring.web.board.mybatis'
+1584954652040	Rename package 'spring.web.board.controller'
+1584954929907	Rename resource 'BoardMapper.xml'
+1584954933835	Rename resource 'MemberMapper.xml'
+1584954938131	Rename resource 'ReplyMapper.xml'
+1584956551082	Delete element
+1584960896350	Rename resource 'list.jsp'
+1584961193053	Rename resource 'cartList'
+1584966229718	Move 'menu.jsp' to 'upload'
+1584966605648	Move 'header.jsp' to 'views'
+1584967135509	Delete element
+1585038273713	Delete element
+1585041519422	Delete element
+1585041522890	Delete element
+1585041528855	Delete element
+1585042081555	Move 'context-common.xml' to 'spring'
+1585047889774	Delete element
+1585048150024	Move 'log4j.xml' to 'spring'
+1585048210918	Delete element
+1585050330158	Delete element
+1585050718455	Delete element
+1585054038918	Delete elements
+1585054058302	Delete elements
+1585054095216	Delete elements
+1585124447786	Delete element
+1585124519676	Move file
+1585125455242	Move 'context-common.xml' to 'appServlet'
+1585133198193	Delete element
+1585134898838	Delete element
+1585134906693	Delete element
+1585138131801	Copy files
+1585138161013	Rename resource 'boardList.jsp'
+1585138169375	Delete element
+1585138173388	Delete element
+1585138352277	Rename resource 'ingredient.jsp'
+1585138635878	Copy file
+1585138639427	Delete element
+1585295224363	Delete element
+1585295269144	Copy file
+1585296942003	Move 'upload' to 'ingredient'
+1585298202807	Delete element
+1585299340932	Delete element
+1585311223366	Delete element

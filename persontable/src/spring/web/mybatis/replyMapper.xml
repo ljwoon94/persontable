@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="replyMapper">
+
+	<!-- 댓글 조회 -->
+	<select id="readReply" resultType="spring.web.vo.ReplyVO">
+		SELECT
+		RNO, CONTENT, WRITER,
+		REGDATE
+		FROM REPLY
+		WHERE BNO = #{bno}
+	</select>
+
+	<select id="readNoticeReply"
+		resultType="spring.web.vo.NoticeReplyVO">
+		SELECT
+		RNO, CONTENT, WRITER, REGDATE
+		FROM NOTICE_REPLY
+		WHERE
+		NNO = #{nno}
+	</select>
+
+	<!-- 댓글작성 -->
+	<insert id="writeReply">
+		INSERT INTO REPLY(BNO, RNO, CONTENT, WRITER)
+		VALUES(
+		#{bno}, REPLY_SEQ.NEXTVAL, #{content}, #{writer} )
+	</insert>
+
+	<insert id="writeNoticeReply">
+		INSERT INTO NOTICE_REPLY(NNO, RNO, CONTENT, WRITER)
+		VALUES( #{nno}, REPLY_SEQ.NEXTVAL, #{content}, #{writer} )
+	</insert>
+
+	<!-- 댓글 수정 -->
+	<update id="updateReply" parameterType="spring.web.vo.ReplyVO">
+		UPDATE REPLY SET CONTENT
+		= #{content}
+		WHERE RNO = #{rno}
+	</update>
+
+	<!-- 댓글 수정 -->
+	<update id="updateNoticeReply"
+		parameterType="spring.web.vo.NoticeReplyVO">
+		UPDATE NOTICE_REPLY SET CONTENT = #{content}
+		WHERE RNO =
+		#{rno}
+	</update>
+
+	<!-- 댓글 삭제 -->
+	<delete id="deleteReply" parameterType="spring.web.vo.ReplyVO">
+		DELETE FROM REPLY
+		WHERE
+		RNO = #{rno}
+	</delete>
+
+	<!-- 댓글 삭제 -->
+	<delete id="deleteNoticeReply"
+		parameterType="spring.web.vo.NoticeReplyVO">
+		DELETE FROM NOTICE_REPLY
+		WHERE RNO = #{rno}
+	</delete>
+
+	<!-- 선택된 댓글 조회 -->
+	<select id="selectReply" resultType="spring.web.vo.ReplyVO">
+		SELECT
+		BNO
+		, RNO
+		, CONTENT
+		, WRITER
+		, REGDATE
+		FROM REPLY
+		WHERE RNO = #{rno}
+	</select>
+
+	<select id="selectNoticeReply"
+		resultType="spring.web.vo.NoticeReplyVO">
+		SELECT
+		NNO
+		, RNO
+		, CONTENT
+		, WRITER
+		, REGDATE
+		FROM NOTICE_REPLY
+		WHERE RNO = #{rno}
+	</select>
+</mapper>

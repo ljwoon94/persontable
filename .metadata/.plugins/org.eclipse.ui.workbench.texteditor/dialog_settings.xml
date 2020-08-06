@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="img src"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="img src"/>
+			<item value="카트"/>
+			<item value="nav"/>
+			<item value="목록"/>
+			<item value="./../"/>
+			<item value="utf-8"/>
+			<item value="과일"/>
+			<item value="&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;"/>
+			<item value="EUC-KR"/>
+			<item value="c:for"/>
+			<item value="foreach"/>
+			<item value="replyFo"/>
+			<item value="ingReplyList"/>
+			<item value="cancel"/>
+			<item value="부족합니다"/>
+		</list>
+		<list key="replacehistory">
+			<item value="/"/>
+			<item value="UTF-8"/>
+			<item value="orderView"/>
+			<item value="notice"/>
+			<item value="nno"/>
+			<item value="&quot;form-group&quot;"/>
+			<item value="advertise"/>
+			<item value="ad"/>
+			<item value="read"/>
+			<item value="MemberManage"/>
+			<item value="memberManage"/>
+			<item value="Advertise"/>
+			<item value="board"/>
+			<item value="bno"/>
+			<item value="Notice"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="9"/>
+		<item key="DIALOG_Y_ORIGIN" value="407"/>
+		<item key="DIALOG_WIDTH" value="340"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

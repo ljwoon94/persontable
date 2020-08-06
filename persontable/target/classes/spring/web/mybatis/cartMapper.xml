@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cartMapper">
+	<!-- 장바구니 삽입 -->
+	<insert id="addCart">
+		insert into cart (cartNum, userId, ingNum, cartStock)
+		values (cart_seq.nextval, #{userId}, #{ingNum}, #{cartStock})
+	</insert>
+
+	<!-- 장바구니 목록 -->
+	<select id="cartList" resultType="spring.web.vo.CartListVO">
+		select
+		row_number() over(order
+		by c.cartNum desc) as num,
+		c.cartNum, c.userId, c.ingNum, c.cartStock,
+		c.addDate,
+		g.ingName, g.ingPrice, g.ingThumbImg
+		from cart c
+		inner join
+		ingredient g
+		on c.ingNum = g.ingNum
+		where c.userId = #{userId}
+	</select>
+
+	<!-- 카트 삭제 -->
+	<delete id="deleteCart">
+		delete cart
+		where cartNum = #{cartNum}
+		and userId =
+		#{userId}
+	</delete>
+
+	<!-- 주문 정보 -->
+	<insert id="orderInfo">
+		insert into tbl_order(orderId, userId, orderRec, zip,
+		addr1,
+		addr2, orderPhone, amount)
+		values(#{orderId}, #{userId},
+		#{orderRec}, #{zip}, #{addr1}, #{addr2},
+		#{orderPhone}, #{amount})
+	</insert>
+
+	<!-- 주문 상세 정보 -->
+	<insert id="orderInfo_Details">
+		insert into tbl_order_details(orderDetailsNum,
+		orderId, ingNum, cartStock)
+		select tbl_order_details_seq.nextval,
+		#{orderId}, ingNum, cartStock
+		from cart
+	</insert>
+
+	<!-- 장바구니 비우기 -->
+	<delete id="cartAllDelete">
+		delete cart
+		where userId = #{userId}
+	</delete>
+
+	<!-- 관리자 특정 유저의 주문 목록 -->
+	<select id="orderList" resultType="spring.web.vo.OrderVO">
+		select
+		orderId, userId,
+		orderRec, zip, addr1, addr2, orderPhone, amount,
+		orderDate, delivery
+		from
+		tbl_order
+		where userId = #{userId}
+	</select>
+
+	<!-- 관리자 특정 주문 목록 -->
+	<select id="orderView" resultType="spring.web.vo.OrderListVO">
+		select
+		o.orderId, o.userId,
+		o.orderRec, o.zip, o.addr1, o.addr2,
+		o.orderPhone, o.amount,
+		o.orderDate, o.delivery,
+		d.orderDetailsNum, d.ingNum, d.cartStock,
+		g.ingName,
+		g.ingThumbImg, g.ingPrice
+		from tbl_order o
+		inner join
+		tbl_order_details
+		d
+		on o.orderId = d.orderId
+		inner join ingredient g
+		on
+		d.ingNum = g.ingNum
+		where o.orderId = #{orderId}
+	</select>
+
+
+	<!-- 모든 유저의 주문 목록 -->
+	<select id="adminOrderList" resultType="spring.web.vo.OrderVO">
+		select
+		orderId, userId,
+		orderRec,
+		zip, addr1, addr2,
+		orderPhone, amount, orderDate, delivery
+		from tbl_order
+	</select>
+
+	<!-- 특정 주문 목록 -->
+	<select id="adminOrderView"
+		resultType="spring.web.vo.OrderListVO">
+		select
+		o.orderId, o.userId, o.orderRec,
+		o.zip, o.addr1,
+		o.addr2,
+		o.orderPhone, o.amount, o.orderDate, o.delivery,
+		d.orderDetailsNum, d.ingNum, d.cartStock,
+		g.ingName, g.ingThumbImg,
+		g.ingPrice
+		from tbl_order o
+		inner join tbl_order_details d
+		on o.orderId =
+		d.orderId
+		inner join ingredient g
+		on d.ingNum = g.ingNum
+		where o.orderId
+		= #{orderId}
+	</select>
+
+	<!-- 배송 상태 -->
+	<update id="delivery">
+		update tbl_order
+		set delivery = #{delivery}
+		where
+		orderId = #{orderId}
+
+	</update>
+
+	<!-- 상품 수량 조절 -->
+	<update id="changeStock">
+		update ingredient
+		set ingStock = ingStock - #{ingStock}
+		where ingNum = #{ingNum}
+	</update> 
+	<!-- 상품 수량 조절 보조-->
+	<select id="changeStock_sub"
+		resultType="spring.web.vo.OrderDetailVO">
+		select
+			orderId, ingNum, cartStock 
+		from tbl_order_details 
+			where orderId = #{orderId}
+	</select>
+</mapper>

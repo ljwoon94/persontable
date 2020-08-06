@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Persontable/src=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.web.svc{NoticeService.java[NoticeService" modifiers="513" timestamp="1586172524000"/>
+    <typeInfo handle="=Persontable/src=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.web.dao{NoticeDAO.java[NoticeDAO" modifiers="513" timestamp="1586172300000"/>
+    <typeInfo handle="=Persontable/src=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.web.dao{AdvertiseDAO.java[AdvertiseDAO" modifiers="513" timestamp="1586278432000"/>
+    <typeInfo handle="=Persontable/src=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.web.dao{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1586448890000"/>
+    <typeInfo handle="=Persontable/src=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.web.dao{MemberManageDAO.java[MemberManageDAO" modifiers="513" timestamp="1586334586000"/>
+</typeInfoHistroy>

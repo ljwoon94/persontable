@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Site Metas -->
+<title>Freshshop - Ecommerce Bootstrap 4 HTML Template</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Site Icons -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Site CSS -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/custom.css">
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<!-- Start Main Top -->
+	<header class="main-header">
+		<!-- Start Navigation -->
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+			<div class="container">
+				<!-- Start Header Navigation -->
+				<div class="navbar-header">
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbar-menu" aria-controls="navbars-rs-food"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand" href="index.html"><img
+						src="images/logo.png" class="logo" alt=""></a>
+				</div>
+				<!-- End Header Navigation -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="nav navbar-nav ml-auto" data-in="fadeInDown"
+						data-out="fadeOutUp">
+
+						<ul class="nav navbar-nav ml-auto" data-in="fadeInDown"
+							data-out="fadeOutUp">
+
+							<li class="nav-item"><a class="nav-link" href="about.html">게시판</a></li>
+
+							<li class="nav-item"><a class="nav-link" href="gallery.html">레시피</a></li>
+							<li class="nav-item"><a class="nav-link"
+								href="contact-us.html">식재료</a></li>
+						</ul>
+
+
+						<li class="nav-item"><a class="nav-link" href="about.html">login</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="gallery.html">mypage</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="contact-us.html">mycart</a></li>
+						<div class="collapse navbar-collapse" id="navbar-menu">
+
+
+
+							<ul class="nav navbar-nav ml-auto" data-in="fadeInDown"
+								data-out="fadeOutUp">
+								<form action="#">
+									<input class="form-control" placeholder="Search here..."
+										type="text">
+
+
+								</form>
+								<button type="submit">
+									<i class="fa fa-search"></i>
+								</button>
+
+							</ul>
+						</div>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+
+				<!-- Start Atribute Navigation -->
+				<div class="search-product"></div>
+				<!-- End Atribute Navigation -->
+			</div>
+
+		</nav>
+		<!-- End Navigation -->
+	</header>
+	<!-- End Main Top -->
+
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+
+	<style>
+/* 사이드바 래퍼 스타일 */
+#page-wrapper {
+	padding-left: 250px;
+}
+
+#sidebar-wrapper {
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	margin-left: -250px;
+	background-color: #ffffff;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#page-content-wrapper {
+	width: 100%;
+	padding: 20px;
+}
+/* 사이드바 스타일 */
+.sidebar-nav {
+	width: 250px;
+	margin-top: 150px;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar-nav li {
+	text-indent: 1.5em;
+	line-height: 2.8em;
+}
+
+.sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #000000;
+}
+
+.sidebar-nav li a:hover {
+	color: #000000;
+	background: rgb(255, 255, 255, 0.2);
+}
+
+.sidebar-nav>.sidebar-brand {
+	font-size: 1.3em;
+	line-height: 3em;
+}
+</style>
+
+	<div id="page-wrapper">
+		<!-- 사이드바 -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+
+				<li><a href="#">회원정보수정</a></li>
+				<li><a href="#">회원정보탈퇴</a></li>
+				<li><a href="#">장바구니목록</a></li>
+				<li><a href="#">판매관리페이지</a></li>
+				<li><a href="#">광고관리페이지</a></li>
+				<li><a href="#">회원정보관리페이지</a></li>
+			</ul>
+		</div>
+		<!-- /사이드바 -->
+
+
+		<div class="contact-box-main">
+
+			<div class="container">
+
+				<div class="row">
+					<div class="col-lg-8 col-sm-12">
+						<div class="contact-form-right">
+							<h2>비밀번호찾기</h2>
+
+							<form id="contactForm">
+								<div class="row">
+
+
+									<div class="col-md-12">
+										아이디
+										<div class="form-group">
+											<input type="text" class="form-control" id="id" name="id"
+												required data-error="아이디를 입력해주세요">
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+
+
+									<div class="col-md-12">
+										이름
+										<div class="form-group">
+											<input type="text" class="form-control" id="name" name="name"
+												required data-error="이름을 입력해주세요">
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										비밀번호질문
+										<div class="form-group">
+											<select name="passwdQ" style="width: 400px; height: 35px;">
+												<option value="none">선택</option>
+												<option value="Q1">자신이 처음 살았던 동네는?</option>
+												<option value="Q2">자신의 보물 1호는?</option>
+												<option value="Q3">자신이 가장좋아하는 음식은?</option>
+												<option value="Q4">자신이 가장좋아하는 운동은?</option>
+												<option value="Q5">자신이 감명깊게 읽은 책은?</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-12">
+										비밀번호질문답변
+										<div class="form-group">
+											<input type="text" class="form-control" id="password"
+												name="password" required data-error="질문답변을 입력해주세요">
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+									<div class="submit-button text-center">
+										<button class="btn hvr-hover" id="submit" type="submit"
+											style="margin-right: 10px";>비밀번호찾기</button>
+										<button class="btn hvr-hover" id="submit" type="submit"
+											style="margin-left: 10px">취소</button>
+										<div id="msgSubmit" class="h3 text-center hidden"></div>
+										<div class="clearfix"></div>
+									</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Start Footer  -->
+		<footer>
+			<div class="footer-main">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-12 col-sm-12">
+							<div class="footer-top-box">
+								<h3>운영시간</h3>
+								<ul class="list-time">
+									<li>월요일 - 금요일: 08.00am to 05.00pm</li>
+									<li>토요일: 10.00am to 08.00pm</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 col-sm-12">
+							<div class="footer-top-box">
+								<h3>About 1인식탁</h3>
+								<p>1인식탁은 1인가구를 위한 레시피제공, 그에 띠른 식자재 제공 및 배달로 요리에 대한 접근을 쉽게
+									만들어주고자 하는 서비스입니다. 1인가구의 양에 맞춤한 용량으로 서비스를 제공합니다.</p>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-12 col-sm-12">
+							<div class="footer-link-contact">
+								<h4>Contact Us</h4>
+								<ul>
+									<li>
+										<p>
+											<i class="fas fa-map-marker-alt"></i>Address: Michael I. Days
+											3756 <br>Preston Street Wichita,<br> KS 67213
+										</p>
+									</li>
+									<li>
+										<p>
+											<i class="fas fa-phone-square"></i>Phone: <a
+												href="tel:+1-888705770">+1-888 705 770</a>
+										</p>
+									</li>
+									<li>
+										<p>
+											<i class="fas fa-envelope"></i>Email: <a
+												href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer  -->
+
+
+
+		<a href="#" id="back-to-top" title="Back to top"
+			style="display: none;">&uarr;</a>
+
+		<!-- ALL JS FILES -->
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- ALL PLUGINS -->
+		<script src="js/jquery.superslides.min.js"></script>
+		<script src="js/bootstrap-select.js"></script>
+		<script src="js/inewsticker.js"></script>
+		<script src="js/bootsnav.js."></script>
+		<script src="js/images-loded.min.js"></script>
+		<script src="js/isotope.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/baguetteBox.min.js"></script>
+		<script src="js/form-validator.min.js"></script>
+		<script src="js/contact-form-script.js"></script>
+		<script src="js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ingredientMapper">
+
+	<!-- 상품 등록 -->
+	<insert id="ingRegister">
+		insert into ingredient (ingNum, ingName, ingCateCode,
+		ingPrice, ingStock, ingWeight,
+		ingDes, ingImg, ingThumbImg)
+		values
+		(ingredient_seq.nextval, #{ingName},
+		#{ingCateCode}, #{ingPrice},
+		#{ingStock}, #{ingWeight}, #{ingDes},
+		#{ingImg}, #{ingThumbImg}
+		)
+	</insert>
+
+	<select id="ingList" resultType="spring.web.vo.IngredientVO">
+		select ingNum, ingName,
+		ingCateCode,
+		ingPrice, ingStock, ingWeight, ingDes, ingImg, regDate,
+		ingThumbImg
+		from ingredient
+		WHERE 1=1 
+		<include refid="search"></include>
+		order by ingNum desc
+	</select>
+
+	<select id="listCount"
+		parameterType="spring.web.vo.SearchCriteria" resultType="int">
+		SELECT COUNT(INGNUM)
+		FROM INGREDIENT
+		WHERE 1=1
+		<include refid="search"></include>
+		AND INGNUM > 0
+	</select>
+	
+	
+	<sql id="search">
+		<if test="searchType != null">
+			<if test="searchType == 't'.toString()">AND ingName LIKE '%' || #{keyword} || '%'</if>
+		</if>
+	</sql>
+
+	<!-- 상품 조회 + 카테고리 조인 -->
+	<select id="ingredientView"
+		resultType="spring.web.vo.IngredientVO">
+		select ingNum, ingName, ingCateCode, ingPrice, ingStock,
+		ingWeight, ingDes, ingImg, ingThumbImg,
+		regDate from ingredient where
+		ingNum =
+		#{ingNum}
+	</select>
+
+	<!-- 상품 수정 -->
+	<update id="ingredientModify">
+		update ingredient
+		set
+		ingName = #{ingName},
+		ingCateCode = #{ingCateCode},
+		ingPrice = #{ingPrice},
+		ingStock = #{ingStock},
+		ingWeight = #{ingWeight},
+		ingDes = #{ingDes},
+		ingImg = #{ingImg},
+		ingThumbImg = #{ingThumbImg}
+		where
+		ingNum = ${ingNum}
+	</update>
+
+	<!-- 상품 삭제 -->
+	<delete id="ingredientDelete">
+		delete
+		ingredient
+		where ingNum = #{ingNum}
+	</delete>
+
+	<!-- 식재료 판매 목록 -->
+	<select id="sellIngList" resultType="spring.web.vo.IngredientVO">
+		select ingNum, ingName,
+		ingCateCode, ingPrice, ingStock,
+		ingWeight, ingDes, ingImg, regDate,
+		ingThumbImg
+		from ingredient
+		WHERE 1=1 
+		<include refid="search"></include>
+		order by ingNum desc
+	</select>
+
+	<!-- 식재료 판매 카테고리별 목록 -->
+	<select id="sellIngCateList"
+		resultType="spring.web.vo.IngredientVO">
+		select ingNum, ingName, ingCateCode, ingPrice, ingStock,
+		ingWeight, ingDes, ingImg, regDate, ingThumbImg
+		from ingredient WHERE
+		ingCateCode = #{ingCateCode}
+	</select>
+
+	<!-- 식재료 조회 -->
+	<select id="sellIngView" resultType="spring.web.vo.IngredientVO">
+		select ingNum, ingName,
+		ingCateCode, ingPrice, ingStock,
+		ingWeight, ingDes, ingImg,
+		ingThumbImg,
+		regDate from ingredient where ingNum = #{ingNum}
+	</select>
+
+	<!-- 식재료 후기(댓글) 작성 -->
+	<insert id="registIngReply">
+		insert into ing_reply (ingNum, userId, repNum,
+		repCon)
+		values (#{ingNum}, #{userId}, ing_reply_seq.nextval, #{repCon})
+	</insert>
+
+	<!-- 식재료 후기 목록 -->
+	<select id="ingReplyList"
+		resultType="spring.web.vo.IngReplyListVO">
+		select
+		r.ingNum, r.userId, r.repNum, r.repCon, r.repDate,
+		m.userId
+		from ing_reply r
+		inner join member m
+		on r.userId = m.userId
+		where ingNum = #{ingNum}
+	</select>
+
+	<!-- 식재료 후기(댓글) 삭제 -->
+	<delete id="deleteIngReply">
+		delete ing_reply
+		where repNum = #{repNum}
+		and userId =
+		#{userId}
+	</delete>
+
+	<!-- 아이디 체크 -->
+	<select id="replyUserIdCheck" resultType="String">
+		select userId
+		from
+		ing_reply
+		where repNum = #{repNum}
+	</select>
+
+	<!-- 상품 후기(댓글) 수정 -->
+	<update id="modifyIngReply">
+		update ing_reply
+		set
+		repCon = #{repCon}
+		where repNum = #{repNum}
+		and userId = #{userId}
+	</update>
+</mapper>

@@ -1,0 +1,17 @@
+1585561861590	Copy file
+1585561873059	Move 'cartList.jsp' to 'other'
+1585561876839	Rename resource 'ingredientList.jsp'
+1585561908074	Copy file
+1585646161965	Rename resource 'cart'
+1585646352231	Rename type 'CartController'
+1585646413151	Rename type 'CartDAO'
+1585646421698	Rename type 'CartDAOImpl'
+1585646458228	Delete element
+1585646461098	Delete element
+1585646488562	Delete element
+1585646497196	Rename resource 'cartMapper.xml'
+1585646586839	Rename type 'OrderService'
+1585646595226	Rename type 'OrderServiceImpl'
+1585646651039	Delete element
+1585646654333	Delete element
+1585654885569	Delete element

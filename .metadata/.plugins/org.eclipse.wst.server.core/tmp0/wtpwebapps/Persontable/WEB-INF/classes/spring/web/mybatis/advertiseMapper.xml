@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="advertiseMapper">
+
+	<select id="selectAdvertiseList" parameterType="spring.web.vo.AdvertiseVO" resultType="spring.web.vo.AdvertiseVO">
+        select * from ADVERTISE
+    </select>
+    <select id="listPage" resultType="spring.web.vo.AdvertiseVO">
+				SELECT  ADNUM 
+	   					, ADNAME
+	   					, ADDES 
+	   					, ADIMG
+	   					, ADTHUMBIMG
+		 FROM ( 
+		        SELECT ADNUM 
+	   					, ADNAME
+	   					, ADDES 
+	   					, ADIMG
+	   					, ADTHUMBIMG,
+		               ROW_NUMBER() OVER(ORDER BY ADNUM DESC) AS RNUM
+		         FROM ADVERTISE
+		         WHERE 1=1 
+		         	<include refid="search"></include>
+		                       )
+		WHERE RNUM BETWEEN #{rowStart} AND #{rowEnd}
+		ORDER BY ADNUM DESC
+	</select>
+    
+    <select id="listCount" parameterType="spring.web.vo.SearchCriteria" resultType="int">
+		SELECT COUNT(ADNUM)
+		   FROM ADVERTISE, MEMBER
+		   WHERE 1=1
+		<include refid="search"></include>	
+		   AND ADNUM > 0
+	</select>
+	
+    <insert id="insert" parameterType="spring.web.vo.AdvertiseVO" useGeneratedKeys="true" keyProperty="adNum">
+      <selectKey keyProperty="adNum" resultType="int" order="BEFORE">
+	    	SELECT ADVERTISE_SEQ.NEXTVAL FROM DUAL
+	    </selectKey>
+	   INSERT INTO ADVERTISE(    ADNUM 
+	   					      , ADNAME
+	   					      , ADDES 
+	   					      , ADIMG
+	   					      , ADTHUMBIMG)
+	                 VALUES(    #{adNum}
+	                 		  , #{adName}
+	                 		  , #{adDes}
+	                 		  , #{adImg}
+	                 		  , #{adThumbImg}  )
+   </insert>
+
+   <select id="read" parameterType="int" resultType="spring.web.vo.AdvertiseVO">
+		SELECT	  ADNUM 
+	   			, ADNAME
+	   			, ADDES 
+	   			, ADIMG
+	   			, ADTHUMBIMG
+		 FROM ADVERTISE
+		 WHERE ADNUM = #{adNum}
+	</select>
+	
+	<update id="update">
+		update ADVERTISE
+		set
+		adName = #{adName},
+		adDes = #{adDes},
+		adImg = #{adImg},
+		adThumbImg = #{adThumbImg}
+		where
+		adNum = ${adNum}
+	</update>
+	
+	<delete id="delete">
+		delete
+		ADVERTISE
+		where adNum = #{adNum}
+	</delete>
+	
+	<sql id="search">
+		<if test="searchType != null">
+			<if test="searchType == 't'.toString()">AND ADNAME LIKE '%' || #{keyword} || '%'</if>
+		</if>
+	</sql>
+	
+</mapper>

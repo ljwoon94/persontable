@@ -1,0 +1,128 @@
+
+2월 19, 2020 14:42:17.54 NEW SESSION
+2월 19, 2020 14:42:17.54 
+2월 19, 2020 14:42:17.54 KLIB_SelfTest return : KLR_OK
+
+2월 19, 2020 14:46:03.20 NEW SESSION
+2월 19, 2020 14:46:03.20 
+2월 19, 2020 14:46:03.21 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 14:46:16.25 
+2월 19, 2020 14:46:16.26 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 14:56:21.66 
+2월 19, 2020 14:56:21.67 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 14:57:47.86 
+2월 19, 2020 14:57:47.86 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 15:13:27.69 
+2월 19, 2020 15:13:27.70 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 15:29:21.58 
+2월 19, 2020 15:29:21.58 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 15:59:45.29 
+2월 19, 2020 15:59:45.29 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 16:08:42.35 
+2월 19, 2020 16:08:42.36 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 16:11:54.32 
+2월 19, 2020 16:11:54.32 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 17:06:05.88 
+2월 19, 2020 17:06:05.89 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 17:06:15.45 
+2월 19, 2020 17:06:15.45 KLIB_SelfTest return : KLR_OK
+2월 19, 2020 17:08:47.39 
+2월 19, 2020 17:08:47.39 KLIB_SelfTest return : KLR_OK
+
+2월 24, 2020 15:35:25.35 NEW SESSION
+2월 24, 2020 15:35:25.35 [11436:10156:0224/153525.352:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+2월 24, 2020 15:35:54.58 [11436:10156:0224/153554.583:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+2월 24, 2020 15:36:45.46 [11436:10156:0224/153645.462:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+2월 24, 2020 15:38:27.19 [11436:10156:0224/153827.194:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+2월 24, 2020 15:41:42.03 [11436:10156:0224/154142.028:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+2월 24, 2020 15:49:23.76 [11436:10156:0224/154923.763:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+2월 24, 2020 15:59:23.77 [11436:10156:0224/155923.770:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+2월 24, 2020 16:09:23.77 [11436:10156:0224/160923.775:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+2월 24, 2020 16:56:14.53 
+2월 24, 2020 16:56:14.54 KLIB_SelfTest return : KLR_OK
+2월 24, 2020 16:58:33.73 
+2월 24, 2020 16:58:33.74 KLIB_SelfTest return : KLR_OK
+2월 24, 2020 17:01:15.10 
+2월 24, 2020 17:01:15.11 KLIB_SelfTest return : KLR_OK
+
+2월 24, 2020 17:08:47.67 NEW SESSION
+2월 24, 2020 17:08:47.67 
+2월 24, 2020 17:08:47.68 KLIB_SelfTest return : KLR_OK
+2월 24, 2020 17:18:02.44 
+2월 24, 2020 17:18:02.45 KLIB_SelfTest return : KLR_OK
+2월 24, 2020 17:47:59.29 
+2월 24, 2020 17:47:59.29 KLIB_SelfTest return : KLR_OK
+
+2월 25, 2020 14:14:35.48 NEW SESSION
+2월 25, 2020 14:14:35.48 
+2월 25, 2020 14:14:35.49 KLIB_SelfTest return : KLR_OK
+
+3월 18, 2020 13:48:45.42 NEW SESSION
+3월 18, 2020 13:48:45.42 
+3월 18, 2020 13:48:45.42 KLIB_SelfTest return : KLR_OK
+
+3월 18, 2020 14:08:28.91 NEW SESSION
+3월 18, 2020 14:08:28.91 
+3월 18, 2020 14:08:28.92 KLIB_SelfTest return : KLR_OK
+3월 18, 2020 14:12:48.56 
+3월 18, 2020 14:12:48.57 KLIB_SelfTest return : KLR_OK
+3월 18, 2020 14:13:20.79 
+3월 18, 2020 14:13:20.80 KLIB_SelfTest return : KLR_OK
+
+3월 18, 2020 14:25:13.24 NEW SESSION
+3월 18, 2020 14:25:13.24 
+3월 18, 2020 14:25:13.25 KLIB_SelfTest return : KLR_OK
+3월 18, 2020 14:27:10.90 
+3월 18, 2020 14:27:10.90 KLIB_SelfTest return : KLR_OK
+
+3월 26, 2020 17:39:13.64 NEW SESSION
+3월 26, 2020 17:39:13.64 
+3월 26, 2020 17:39:13.65 KLIB_SelfTest return : KLR_OK
+3월 26, 2020 17:45:54.82 
+3월 26, 2020 17:45:54.83 KLIB_SelfTest return : KLR_OK
+3월 26, 2020 17:58:27.61 
+3월 26, 2020 17:58:27.62 KLIB_SelfTest return : KLR_OK
+3월 26, 2020 17:59:30.00 
+3월 26, 2020 17:59:30.01 KLIB_SelfTest return : KLR_OK
+3월 26, 2020 18:05:11.09 
+3월 26, 2020 18:05:11.10 KLIB_SelfTest return : KLR_OK
+3월 26, 2020 18:06:39.46 
+3월 26, 2020 18:06:39.47 KLIB_SelfTest return : KLR_OK
+3월 28, 2020 22:03:27.91 [10444:8592:0328/220327.602:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+3월 30, 2020 14:00:45.00 [10444:8592:0330/140045.002:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+3월 30, 2020 15:13:05.27 [10444:15936:0330/151305.268:ERROR:socket_stream.cc(218)] Closing stream with result -2
+3월 30, 2020 15:13:48.32 [10444:15936:0330/151348.322:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+3월 30, 2020 15:22:18.89 
+3월 30, 2020 15:22:18.89 KLIB_SelfTest return : KLR_OK
+
+4월 06, 2020 16:56:21.01 NEW SESSION
+4월 06, 2020 16:56:21.01 
+4월 06, 2020 16:56:21.01 KLIB_SelfTest return : KLR_OK
+4월 06, 2020 16:57:32.27 
+4월 06, 2020 16:57:32.28 KLIB_SelfTest return : KLR_OK
+4월 06, 2020 16:59:33.91 
+4월 06, 2020 16:59:33.92 KLIB_SelfTest return : KLR_OK
+
+4월 06, 2020 17:02:56.52 NEW SESSION
+4월 06, 2020 17:02:56.52 [2948:4888:0406/170256.522:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 17:03:20.53 [2948:4888:0406/170320.533:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 17:04:07.26 [2948:4888:0406/170407.263:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 17:05:41.20 [2948:4888:0406/170541.201:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 17:05:47.84 
+4월 06, 2020 17:05:47.85 KLIB_SelfTest return : KLR_OK
+4월 06, 2020 20:10:49.88 [11808:14280:0406/201049.884:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 20:11:15.01 [11808:14280:0406/201115.012:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 20:12:06.39 [11808:14280:0406/201206.394:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 20:14:04.39 [11808:14280:0406/201404.394:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 20:16:57.79 [11808:14280:0406/201657.790:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 20:24:21.77 [11808:14280:0406/202421.771:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 20:34:21.79 [11808:14280:0406/203421.798:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 06, 2020 20:44:21.90 [11808:14280:0406/204421.899:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+
+4월 09, 2020 16:48:42.05 NEW SESSION
+4월 09, 2020 16:48:42.05 [8196:15080:0409/164841.990:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 16:49:07.43 [8196:15080:0409/164907.439:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 16:50:00.85 [8196:15080:0409/165000.849:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 16:51:36.11 [8196:15080:0409/165136.116:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 16:55:31.29 [8196:15080:0409/165531.279:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 17:02:53.73 [8196:15080:0409/170253.730:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
